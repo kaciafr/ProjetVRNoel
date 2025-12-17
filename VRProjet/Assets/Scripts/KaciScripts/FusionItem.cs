@@ -2,14 +2,11 @@ using UnityEngine;
 
 public class FusionItem : MonoBehaviour
 {
-    [Header("Item Identity")]
     public string itemID; 
-    
-    [Header("Fusion Settings")]
     public float fusionDistance = 0.5f;
-    
-
     private bool isBeingFused = false;
+    
+    
     
     void OnCollisionEnter(Collision collision)
     {
@@ -25,7 +22,7 @@ public class FusionItem : MonoBehaviour
         
         if (otherItem != null && !otherItem.isBeingFused)
         {
-            Debug.Log($"🔵 Collision détectée: {itemID} + {otherItem.itemID}");
+            Debug.Log($" Collision détectée: {itemID} + {otherItem.itemID}");
             
             isBeingFused = true;
             otherItem.isBeingFused = true;
@@ -38,7 +35,7 @@ public class FusionItem : MonoBehaviour
             }
             else
             {
-                Debug.LogError("❌ FusionManager.Instance est null !");
+                Debug.LogError("FusionManager.Instance est null !");
             }
         }
     }

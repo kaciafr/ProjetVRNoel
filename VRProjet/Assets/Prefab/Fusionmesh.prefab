@@ -800,7 +800,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52774ede3ed04a94cb7a3a678a192f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FusedObject
+  damage: 1
+  knockbackForce: 100
   destroyOnHit: 1
+  animator: {fileID: 0}
 --- !u!1 &8990071538858521893
 GameObject:
   m_ObjectHideFlags: 0

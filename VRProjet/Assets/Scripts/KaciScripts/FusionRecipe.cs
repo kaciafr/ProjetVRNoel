@@ -6,6 +6,7 @@ public class FusionRecipe : ScriptableObject
     public string ingredient1ID;
     public string ingredient2ID;
     public GameObject resultPrefab;
+    public int damageball;
     
     public bool Matches(string id1, string id2)
     {
