@@ -16,7 +16,6 @@ public class FusionManager : MonoBehaviour
 
     void Awake()
     {
-        // Singleton pattern
         if (Instance == null)
         {
             Instance = this;

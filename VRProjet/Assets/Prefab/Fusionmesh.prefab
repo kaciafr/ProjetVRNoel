@@ -583,6 +583,7 @@ GameObject:
   - component: {fileID: 4913186930199909268}
   - component: {fileID: 293132212262758619}
   - component: {fileID: 1557265089196933517}
+  - component: {fileID: 5159119861236768426}
   m_Layer: 0
   m_Name: Fusionmesh
   m_TagString: Untagged
@@ -787,6 +788,19 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &5159119861236768426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7178295618899182622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52774ede3ed04a94cb7a3a678a192f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FusedObject
+  destroyOnHit: 1
 --- !u!1 &8990071538858521893
 GameObject:
   m_ObjectHideFlags: 0
