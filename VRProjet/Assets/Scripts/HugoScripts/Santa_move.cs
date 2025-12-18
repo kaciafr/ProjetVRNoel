@@ -1,43 +1,41 @@
 using UnityEngine;
 using System.Collections;
 
-public class CubeMovement : MonoBehaviour
+public class Santa : MonoBehaviour
 {
     [Header("Déplacement")]
-    public float distance = 3f;        // Distance entre droite et gauche
+    public float distance = 3f;        // Distance entre derrière et devant
     public float speed = 2f;           // Vitesse de déplacement
 
     [Header("Pause")]
     public float waitTime = 1f;         // Temps d'attente avant de repartir
 
-    private Vector3 rightPosition;
-    private Vector3 leftPosition;
+    private Vector3 backPosition;
+    private Vector3 forwardPosition;
 
     void Start()
     {
-        // Le point de spawn est le point de droite
-        rightPosition = transform.position;
+        // Spawn = point arrière
+        backPosition = transform.position;
 
-        // Le point de gauche est calculé depuis la droite
-        leftPosition = rightPosition + Vector3.left * distance;
+        // Point devant calculé depuis l'arrière
+        forwardPosition = backPosition + transform.forward * distance;
 
-        StartCoroutine(MoveLeftRight());
+        StartCoroutine(MoveForwardBackward());
     }
 
-    IEnumerator MoveLeftRight()
+    IEnumerator MoveForwardBackward()
     {
         while (true)
         {
-            // Aller à gauche
-            yield return MoveTo(leftPosition);
+            // Aller derrière (sens inversé)
+            yield return MoveTo(backPosition);
 
-            // Pause
             yield return new WaitForSeconds(waitTime);
 
-            // Retour à droite (spawn)
-            yield return MoveTo(rightPosition);
+            // Aller devant
+            yield return MoveTo(forwardPosition);
 
-            // Pause
             yield return new WaitForSeconds(waitTime);
         }
     }

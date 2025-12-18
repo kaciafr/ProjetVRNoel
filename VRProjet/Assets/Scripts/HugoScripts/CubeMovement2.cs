@@ -1,25 +1,25 @@
 using UnityEngine;
 using System.Collections;
 
-public class CubeMovement : MonoBehaviour
+public class CubeMovement2 : MonoBehaviour
 {
     [Header("Déplacement")]
-    public float distance = 3f;        // Distance entre droite et gauche
+    public float distance = 3f;        // Distance entre gauche et droite
     public float speed = 2f;           // Vitesse de déplacement
 
     [Header("Pause")]
     public float waitTime = 1f;         // Temps d'attente avant de repartir
 
-    private Vector3 rightPosition;
     private Vector3 leftPosition;
+    private Vector3 rightPosition;
 
     void Start()
     {
-        // Le point de spawn est le point de droite
-        rightPosition = transform.position;
+        // Le point de spawn est le point de gauche
+        leftPosition = transform.position;
 
-        // Le point de gauche est calculé depuis la droite
-        leftPosition = rightPosition + Vector3.left * distance;
+        // Le point de droite est calculé depuis la gauche
+        rightPosition = leftPosition + Vector3.right * distance;
 
         StartCoroutine(MoveLeftRight());
     }
@@ -28,14 +28,14 @@ public class CubeMovement : MonoBehaviour
     {
         while (true)
         {
-            // Aller à gauche
-            yield return MoveTo(leftPosition);
+            // Aller à droite
+            yield return MoveTo(rightPosition);
 
             // Pause
             yield return new WaitForSeconds(waitTime);
 
-            // Retour à droite (spawn)
-            yield return MoveTo(rightPosition);
+            // Retour à gauche (spawn)
+            yield return MoveTo(leftPosition);
 
             // Pause
             yield return new WaitForSeconds(waitTime);
