@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Transformers;
 
 namespace Kacia
 {
@@ -7,13 +10,37 @@ namespace Kacia
     {
         public string key;
 
-        void OnCollisionEnter(Collision collision)
+        private void Awake()
         {
-            FusionItem other = collision.gameObject.GetComponent<FusionItem>();
-
-            if (other == null) return;
+            if (GetComponent<Rigidbody>() == null)
+            {
+                gameObject.AddComponent<Rigidbody>();
+            }
             
-            FusionManager.Instance.TryFusion(new List<FusionItem>{ this, other });
+            if (GetComponent<XRGrabInteractable>() == null)
+            {
+                gameObject.AddComponent<XRGrabInteractable>();
+            }
+            
+            if (GetComponent<XRGeneralGrabTransformer>() == null)
+            {
+                gameObject.AddComponent<XRGeneralGrabTransformer>();
+            }
+            
+            /*Collider[] colliders = GetComponents<Collider>();
+            foreach (Collider c in colliders)
+                c.isTrigger = true;*/
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            FusionItem otherItem = other.gameObject.GetComponent<FusionItem>();
+
+            Debug.Log($"OnTriggerEnter {this} {other} otherItem={otherItem}", this);
+            
+            if (otherItem == null) return;
+            
+            FusionManager.Instance.TryFusion(new List<FusionItem>{ this, otherItem });
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Kacia
 
         public override string ToString()
         {
-            return $"FusionRecipe({string.Join("+", ingredients)}->{result})";;
+            return $"FusionRecipe({string.Join("+", ingredients.Select(i => i.name))}->{result.name})";;
         }
     }
 }
