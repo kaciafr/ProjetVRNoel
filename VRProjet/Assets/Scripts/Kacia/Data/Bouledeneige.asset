@@ -15,3 +15,11 @@ MonoBehaviour:
   ingredient1ID: Bouledeneige_01
   ingredient2ID: gravier_01
   resultPrefab: {fileID: 7178295618899182622, guid: 7c9ea7bbf9dc72f4cbbe5b665c34a997, type: 3}
+  damageball: 0
+  items:
+  - ingredients:
+    - {fileID: 0}
+    - {fileID: 0}
+    result: {fileID: 0}
+  - ingredients: []
+    result: {fileID: 0}
