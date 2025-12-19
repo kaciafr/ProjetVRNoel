@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 96a335c5c177fdd45aea46a34e10d19d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 825dce78bb869514da6cf24f8c0bb834, type: 2}
     - target: {fileID: 919132149155446097, guid: 96a335c5c177fdd45aea46a34e10d19d, type: 3}
       propertyPath: m_Name
       value: minerauxBleu

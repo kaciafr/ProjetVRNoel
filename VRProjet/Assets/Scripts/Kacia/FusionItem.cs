@@ -27,9 +27,7 @@ namespace Kacia
                 gameObject.AddComponent<XRGeneralGrabTransformer>();
             }
             
-            /*Collider[] colliders = GetComponents<Collider>();
-            foreach (Collider c in colliders)
-                c.isTrigger = true;*/
+        
         }
 
         private void OnCollisionEnter(Collision other)

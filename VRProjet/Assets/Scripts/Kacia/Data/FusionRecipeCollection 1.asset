@@ -15,5 +15,21 @@ MonoBehaviour:
   recipes:
   - ingredients:
     - {fileID: 4570602120742713289, guid: 6c3fc987bbf2d6d4989b7f9f09e3e98c, type: 3}
-    - {fileID: 8057492630058135540, guid: dafbc94e82ae68f47ae1e51841bca5ac, type: 3}
+    - {fileID: 2110985784653840476, guid: 0a4fdc6722267724487699263066bd88, type: 3}
     result: {fileID: 8893836012569414129, guid: 4e090a350ec18af448ab5a1fa4835425, type: 3}
+  - ingredients:
+    - {fileID: 2110985784653840476, guid: 0a4fdc6722267724487699263066bd88, type: 3}
+    - {fileID: 1844350230936601699, guid: ce64cfdea4620ed4f9d21fccff343bc4, type: 3}
+    result: {fileID: 3093560050567360746, guid: 7e63d33af2d1c1f44b28c86b3a81b887, type: 3}
+  - ingredients:
+    - {fileID: 856388348508215996, guid: e5a56a9f87cab324087703b9e185273d, type: 3}
+    - {fileID: 2110985784653840476, guid: 0a4fdc6722267724487699263066bd88, type: 3}
+    result: {fileID: 655438602457696923, guid: 11964084e807ff3468db4a81651675a1, type: 3}
+  - ingredients:
+    - {fileID: 1844350230936601699, guid: ce64cfdea4620ed4f9d21fccff343bc4, type: 3}
+    - {fileID: 1844350230936601699, guid: ce64cfdea4620ed4f9d21fccff343bc4, type: 3}
+    result: {fileID: 2110985784653840476, guid: 0a4fdc6722267724487699263066bd88, type: 3}
+  - ingredients:
+    - {fileID: 2577342367951452195, guid: b8afa8ed25ddfdb4499b5e00eda15e15, type: 3}
+    - {fileID: 2110985784653840476, guid: 0a4fdc6722267724487699263066bd88, type: 3}
+    result: {fileID: 7390061693893321892, guid: 8857b1ed756944441bfaa5fbef4d9058, type: 3}
