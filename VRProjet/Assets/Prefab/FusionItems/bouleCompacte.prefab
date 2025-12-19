@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 76004ab475669bc49a42e15c3bbf4796, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.26988
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76004ab475669bc49a42e15c3bbf4796, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76004ab475669bc49a42e15c3bbf4796, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.16576
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76004ab475669bc49a42e15c3bbf4796, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62,9 +62,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 76004ab475669bc49a42e15c3bbf4796, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9126852385298505862}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 76004ab475669bc49a42e15c3bbf4796, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 910990818998318506}
   m_SourcePrefab: {fileID: 100100000, guid: 76004ab475669bc49a42e15c3bbf4796, type: 3}
 --- !u!1 &3093560050567360746 stripped
 GameObject:
@@ -84,6 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Kacia.FusionItem
   key: bouleCompacte
+  damage: 5
 --- !u!135 &9126852385298505862
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -103,21 +101,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.25936747
+  m_Radius: 0.25
   m_Center: {x: 0.002336502, y: 0.057606578, z: -0.0058912933}
---- !u!114 &910990818998318506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3093560050567360746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52774ede3ed04a94cb7a3a678a192f9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Kacia.FusedObject
-  damage: 16
-  knockbackForce: 100
-  destroyOnHit: 1
-  animator: {fileID: 0}

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2305548459818339804}
   - component: {fileID: 2284421127196652707}
   - component: {fileID: 234833599009321843}
-  - component: {fileID: 167419879413622459}
   - component: {fileID: -3881864486507459802}
   m_Layer: 0
   m_Name: Bouledeneige
@@ -29,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 2110985784653840476}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.6228, y: 100.92757, z: -74.74162}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8696498932501034592}
@@ -55,7 +54,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.0102408985
+  m_Radius: 0.25
   m_Center: {x: 0, y: -0.00040096283, z: 0}
 --- !u!114 &234833599009321843
 MonoBehaviour:
@@ -70,22 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Kacia.FusionItem
   key: Bouledneige
---- !u!114 &167419879413622459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110985784653840476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52774ede3ed04a94cb7a3a678a192f9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Kacia.FusedObject
-  damage: 8
-  knockbackForce: 100
-  destroyOnHit: 1
-  animator: {fileID: 0}
+  damage: 2
 --- !u!54 &-3881864486507459802
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -141,7 +125,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 23, y: 23, z: 23}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2305548459818339804}

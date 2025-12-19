@@ -131,7 +131,7 @@ namespace Kacia
             createdRb.isKinematic = true;
             createdRb.detectCollisions = false;
 
-            // ✅ Scale de 0 à 1 sur l'objet créé
+            // Scale de 0 à 1 sur l'objet créé
             created.transform.localScale = Vector3.zero;
             
             created.transform
@@ -144,7 +144,7 @@ namespace Kacia
                     createdRb.detectCollisions = true;
                 });
 
-            // ✅ Faire disparaître les items fusionnés
+            // Faire disparaître les items fusionnés
             foreach (var item in items)
             {
                 item.transform

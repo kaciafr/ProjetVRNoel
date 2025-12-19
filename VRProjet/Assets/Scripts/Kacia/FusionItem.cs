@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Transformers;
@@ -9,6 +10,7 @@ namespace Kacia
     public class FusionItem : MonoBehaviour
     {
         public string key;
+        public int damage = 3;
 
         private void Awake()
         {
@@ -26,19 +28,35 @@ namespace Kacia
             {
                 gameObject.AddComponent<XRGeneralGrabTransformer>();
             }
-            
-        
         }
 
-        private void OnCollisionEnter(Collision other)
+        private void OnCollisionEnter(Collision collision)
         {
-            FusionItem otherItem = other.gameObject.GetComponent<FusionItem>();
+            Debug.Log($"OnCollisionEnter {this} {collision} other={collision}", this);
+            
+            FusionItem otherItem = collision.gameObject.GetComponent<FusionItem>();
+            if (otherItem != null)
+            {
+                FusionManager.Instance.TryFusion(new List<FusionItem>{ this, otherItem });
+                return;
+            }
+            
+            Ennemy ennemy = collision.gameObject.GetComponent<Ennemy>();
+            if (ennemy != null)
+            {
+                Debug.Log($" Script Ennemy trouvé sur {ennemy.name}");
 
-            Debug.Log($"OnTriggerEnter {this} {other} otherItem={otherItem}", this);
-            
-            if (otherItem == null) return;
-            
-            FusionManager.Instance.TryFusion(new List<FusionItem>{ this, otherItem });
+                ennemy.TakeDamage(damage, collision);
+
+                var rb = GetComponent<Rigidbody>();
+                rb.isKinematic = true;
+                rb.detectCollisions = false;
+                
+                transform
+                    .DOScale(0, 0.3f)
+                    .SetEase(Ease.InBack)
+                    .OnComplete(() =>  Destroy(this.gameObject));
+            }
         }
     }
 }

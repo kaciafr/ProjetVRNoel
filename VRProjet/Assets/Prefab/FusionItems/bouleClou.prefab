@@ -101,7 +101,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1969004439739044427}
   - component: {fileID: 4803732989505603183}
-  - component: {fileID: 7089834089375150791}
   - component: {fileID: 9069696665676715322}
   - component: {fileID: 3001577136008765049}
   m_Layer: 0
@@ -120,8 +119,8 @@ Transform:
   m_GameObject: {fileID: 655438602457696923}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.43351, y: 0.73106, z: -11.75023}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6535775140336484005}
@@ -140,22 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Kacia.FusionItem
   key: bouleclou
---- !u!114 &7089834089375150791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655438602457696923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52774ede3ed04a94cb7a3a678a192f9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Kacia.FusedObject
-  damage: 25
-  knockbackForce: 100
-  destroyOnHit: 1
-  animator: {fileID: 0}
+  damage: 7
 --- !u!135 &9069696665676715322
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -175,7 +159,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.04
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3001577136008765049
 Rigidbody:

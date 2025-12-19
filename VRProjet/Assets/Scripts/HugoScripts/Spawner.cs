@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
 
     // Temps d'attente avant de spawn un cube, modifiable dans l'Inspector
     public float spawnDelay = 3f;
+    
+    public bool inverted = false;
 
     void Start()
     {
@@ -21,6 +23,15 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(spawnDelay);
 
         // Instancier le cube
-        Instantiate(cubePrefab, transform.position, transform.rotation);
+        var o = Instantiate(cubePrefab, transform.position, transform.rotation);
+
+        if (inverted)
+        {
+            var m = o.GetComponent<CubeMovement>();
+            if (m != null)
+            {
+                m.distance = -m.distance;
+            }
+        }
     }
 }
